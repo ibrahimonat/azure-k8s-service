@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: appbuildbuildid 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appbuildbuildid
+  template:
+    metadata:
+      labels:
+        app: appbuildbuildid 
+    spec:
+      containers:
+        - name: appbuildbuildid 
+          image: ibrahimonat.azurecr.io/appbuildbuildid
+          ports:
+          - containerPort: 80
